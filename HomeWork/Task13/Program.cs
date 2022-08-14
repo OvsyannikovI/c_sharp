@@ -19,4 +19,3 @@ if (number > 99 )
 {
     Console.WriteLine("Число не верно");
 }
-// int sot = number / 100;
