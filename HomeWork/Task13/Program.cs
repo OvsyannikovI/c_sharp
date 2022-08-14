@@ -4,12 +4,18 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 int number = Convert.ToInt32(Console.ReadLine());
-while (number) do
-
-
-int sot = number / 100;
-int dec = (number - sot * 100)  / 10;
-int ed = (number - sot * 100 - dec * 10);
-int result = sot * 10 + ed;
-Console.WriteLine(number + " " + sot + " " + dec + " " + ed);
-Console.WriteLine(result);
+if (number > 99 )
+{
+    Console.WriteLine($"Третья цифра числа {number} равна");
+    while (number >1000)
+    {
+        number = number / 10;
+    }
+    int sot = number / 100;
+    int dec = (number - sot * 100)  / 10;
+    int three = (number - sot * 100 - dec * 10);
+    Console.WriteLine($" {three}");
+} else
+{
+    Console.WriteLine("Число не верно");
+}
