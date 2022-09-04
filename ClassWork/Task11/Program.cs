@@ -73,23 +73,33 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-void ReverseArray (int[] array)
+// void ReverseArray (int[] array)
+// {
+//     int size = array.Length;
+//     int index1 = 0;
+//     int index2 = size - 1;
+//     while (index1 < index2)
+//     {
+//         int obj = array[index1];
+//         array[index1] = array[index2];
+//         array[index2] = obj;
+
+//         index1++;
+//         index2--;
+//     }
+// }
+
+// int[] arr = CreateArrayRndInt(5,1,9);
+// PrintArray(arr);
+// ReverseArray(arr);
+// PrintArray(arr);
+Console.WriteLine("Введите целое положительное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+void NaturalNumber(int num)
 {
-    int size = array.Length;
-    int index1 = 0;
-    int index2 = size - 1;
-    while (index1 < index2)
-    {
-        int obj = array[index1];
-        array[index1] = array[index2];
-        array[index2] = obj;
-
-        index1++;
-        index2--;
-    }
+    if (num == 0) return;
+    NaturalNumber(num - 1);
+    Console.Write($"{num} ");
 }
-
-int[] arr = CreateArrayRndInt(5,1,9);
-PrintArray(arr);
-ReverseArray(arr);
-PrintArray(arr);
+NaturalNumber(number);
