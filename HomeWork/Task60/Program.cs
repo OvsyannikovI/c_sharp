@@ -42,3 +42,4 @@ void PrintArray(int[,,] array)
 }
 int[,,] mt1 = CreateArrayRndInt( 2, 2, 2, 0, 100);
 PrintArray(mt1);
+
